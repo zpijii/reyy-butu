@@ -5,10 +5,18 @@ workflows:
     environment:
       java: 17
     scripts:
+      - name: Install Gradle
+        script: |
+          curl -L https://services.gradle.org/distributions/gradle-8.7-bin.zip -o /tmp/gradle.zip
+          unzip -q /tmp/gradle.zip -d /tmp/gradle-dist
+          export GRADLE_HOME=/tmp/gradle-dist/gradle-8.7
+          export PATH=$GRADLE_HOME/bin:$PATH
+          echo "export GRADLE_HOME=/tmp/gradle-dist/gradle-8.7" >> $CM_ENV
+          echo "export PATH=$GRADLE_HOME/bin:$PATH" >> $CM_ENV
+
       - name: Build debug APK
         script: |
           cd reykizen
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          gradle assembleDebug --no-daemon
     artifacts:
       - reykizen/app/build/outputs/apk/debug/*.apk
