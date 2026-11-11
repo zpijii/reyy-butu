@@ -69,6 +69,7 @@ class MainActivity : ComponentActivity() {
         lifecycleScope.launch { vm.probeCapabilities() }
     }
 
+    @Suppress("OVERRIDE_DEPRECATION")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
