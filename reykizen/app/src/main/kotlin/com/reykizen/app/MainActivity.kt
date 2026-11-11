@@ -68,13 +68,4 @@ class MainActivity : ComponentActivity() {
         super.onResume()
         lifecycleScope.launch { vm.probeCapabilities() }
     }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (Shizuku.onRequestPermissionsResult(requestCode, permissions, grantResults)) return
-    }
 }
