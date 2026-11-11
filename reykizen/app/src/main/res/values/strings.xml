@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rey Kizen</string>
+    <string name="accessibility_service_label">Rey Kizen Game Monitor</string>
+    <string name="accessibility_service_description">Monitors BloodStrike to automatically apply and restore display resolution settings for optimal gaming performance.</string>
+    <string name="notification_channel_name">Rey Kizen Active</string>
+    <string name="notification_channel_desc">Shown while Rey Kizen overlay is active in-game</string>
+    <string name="notif_title">Rey Kizen Active</string>
+    <string name="notif_text">Resolution override active — tap to open panel</string>
+</resources>

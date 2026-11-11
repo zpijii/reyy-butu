@@ -1,0 +1,7 @@
+-keep class com.reykizen.app.** { *; }
+-keep class moe.shizuku.** { *; }
+-keep class com.topjohnwu.superuser.** { *; }
+-keepattributes *Annotation*
+-keepattributes Signature
+-dontwarn moe.shizuku.**
+-dontwarn com.topjohnwu.**
